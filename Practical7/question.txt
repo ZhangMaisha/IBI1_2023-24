@@ -1,0 +1,3 @@
+Plot a boxplot of DALYs across countries in 2019.
+I plot a boxplot from line 37 to line 48
+I only use labels, and others are all default values.
