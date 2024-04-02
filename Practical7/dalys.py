@@ -3,8 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 os.chdir("/Users/zhangmaisha/Desktop/IBI/IBI1_2023-24/IBI1_2023-24/Practical7")
-os.getcwd()
-os.listdir()
+print(os.getcwd())
+print(os.listdir())
 dalys_data = pd.read_csv("dalys-rate-from-all-causes.csv")
 #showing the fourth column (the DALYs) from every 10th row, starting from the first row, for the first 100 rows (inclusive).
 print(dalys_data.iloc[0:110:10,3])
