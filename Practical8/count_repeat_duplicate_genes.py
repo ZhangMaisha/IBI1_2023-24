@@ -13,16 +13,17 @@ if repetitive_seq == 'GTCTGT':
 seq = ''
 i = 0
 name = []
-import regex # Import regex to solve the problem where the re cannot find fields that match the expression in overlapping areas
+# Import regex to solve the problem where the re cannot find fields that match the expression in overlapping areas
+import regex 
 for line in input_file:
     if line.startswith(">"):
         name.append(str(re.findall(r'gene:(.+)\sgene_biotype', line))) # see if it matches the regular expression
         n = regex.findall(repetitive_seq, seq, overlapped = True) # add overlapped to search overlapping areas
         count = len(n)
-        if count != 0: # if have the repetitive sequence
+        if count != 0: # if the repetitive sequence exist
             name[i-1] = name[i-1] + ' has '+ str(count) +' '+ repetitive_seq + '\n'
             output_file.write(name[i-1]) # write
         i += 1
         seq = ''
     else:
-        seq += re.sub(r'\n','', line) # stroe the whole sequence without '\n' in the string
+        seq += re.sub(r'\n','', line) # store the whole sequence without '\n' in the string
