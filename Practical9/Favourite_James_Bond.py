@@ -25,3 +25,11 @@ if favourite_bond_actor is None:
     print(f"No Bond actor found for someone born in {birth_year}")  
 else:  
     print(f"The favourite Bond actor for someone born in {birth_year} is {favourite_bond_actor}")
+
+
+birth_year = input("please enter a birth year:")
+if favourite_bond_actor is None:  
+    print(f"No Bond actor found for someone born in {birth_year}")  
+else:  
+    print(f"The favourite Bond actor for someone born in {birth_year} is {favourite_bond_actor}")
+

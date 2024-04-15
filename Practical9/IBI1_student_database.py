@@ -12,5 +12,14 @@ class Student:
 
 
 # Example usage  
-student = Student("John Doe", "BMI", 85, 90, 78)  
+student = Student("A", "BMI", 85, 90, 78)  
 student.print_details()  
+
+name = input(" Please enter the student's name: ")
+major = input(" Please enter student major: ")
+code_portfolio_score = float(input(" Please enter the student's code portfolio score: "))
+group_project_score = float(input(" Please enter the student's group project score: "))
+exam_score = float(input(" Please enter the student's test score: "))
+
+student = Student(name, major, code_portfolio_score, group_project_score, exam_score)
+student.print_details()
