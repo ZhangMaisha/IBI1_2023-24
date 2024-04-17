@@ -1,0 +1,3 @@
+I think that this practical is hard.
+I prefer the spatial_SIR. The interesting aspect of this code lies in its use of randomness to simulate the outbreak of a disease in space.，reflecting the uncertainty and unpredictability of disease transmission in the real world. 
+The most important thing I learned is np.random.choice.
