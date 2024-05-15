@@ -1,0 +1,14 @@
+When run Alignment.py, the result is
+compare SLC6A4_HUMAN with SLC6A4_MOUSE
+BLOSUM score: 3137.0
+percentage identity: 92.53968253968254 %
+compare SLC6A4_HUMAN with SLC6A4_RAT
+BLOSUM score: 3107.0
+percentage identity: 91.74603174603175 %
+compare SLC6A4_MOUSE with SLC6A4_RAT
+BLOSUM score: 3261.0
+percentage identity: 96.82539682539682 %
+
+The greater the BLOSUM score is, the more similar their sequences are.
+So according to BLOSUM scores and percentage identity, human SLC6A4 gene sequence is more like the mouse than the rat.
+Mouse is a better model organism for studying variation in the SLC6A4 gene in humans.
