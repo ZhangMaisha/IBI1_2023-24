@@ -76,7 +76,6 @@ plt.title('The Number of Terms within Each Ontology: DOM')
 plt.xticks(rotation=90) 
 plt.tight_layout()
 plt.show()
-plt.clf()
 
 plt.figure(figsize=(10, 6)) 
 bars = plt.bar(total_SAX.keys(), total_SAX.values(), width=0.3, color="blue")
@@ -86,6 +85,6 @@ plt.tight_layout()
 plt.show()
 plt.clf()
 
-#Time taken to parse XML using DOM: 0:00:04.287885
-#Time taken to parse XML using SAX: 0:00:00.871735
+#Time taken to parse XML using DOM: 0:00:12.944466
+#Time taken to parse XML using SAX: 0:00:02.675386
 #SAX is quicker to complete the task
