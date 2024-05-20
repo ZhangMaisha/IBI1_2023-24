@@ -11,8 +11,7 @@ vaccination_rates=[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9,1.0]
 # Create a normalized object to map vaccination_rates to[0, 1]
 norm = plt.Normalize(min(vaccination_rates), max(vaccination_rates))  
 for vaccination_rate in vaccination_rates:  
-    if vaccination_rate == 1.0:  
-        # 直接绘制没有感染者的曲线  
+    if vaccination_rate == 1.0:   
         I_history = [0] * 1000  
         plt.plot(range(len(I_history)), I_history, label='100%', color = cm.viridis(norm(vaccination_rate)))  
         continue  
