@@ -10,3 +10,4 @@ I add some pseudocode.
 I don't know why the file is missing, and I add this file.
 3. Check the number of days required to exceed 90% density (it takes 5 days, but answer may be 4 as you have to come back before 90% is reached. Accept both answers)>wrong explanation
 I improve my explanation.
+Finally, I also update my code for City_sizes.py in Practical6. Although no points were deducted, I found that there were some sorting errors.

@@ -4,15 +4,15 @@ uk_populations = [0.56, 0.62, 0.04, 9.7]
 china_cities = ["Haining", "Hangzhou", "Shanghai", "Beijing"]  
 china_populations = [0.58, 8.4, 29.9, 22.2]  
   
-# Sort the UK and China populations   
-uk_sorted_cities_pops = sorted(zip(uk_cities, uk_populations), key=lambda x: x[1], reverse=True)  
-uk_sorted_cities, uk_sorted_pops = zip(*uk_sorted_cities_pops)  
-china_sorted_cities_pops = sorted(zip(china_cities, china_populations), key=lambda x: x[1], reverse=True)  
-china_sorted_cities, china_sorted_pops = zip(*china_sorted_cities_pops)  
-print("Sorted UK City Populations (millions):", uk_sorted_pops)  
-print("Sorted China City Populations (millions):", china_sorted_pops)  
-import matplotlib.pyplot as plt  
+# Sort the UK and China populations    
+uk_sorted_indices = sorted(range(len(uk_cities)), key=lambda k: uk_populations[k])  
+uk_sorted_cities = [uk_cities[i] for i in uk_sorted_indices]  
+uk_sorted_pops = [uk_populations[i] for i in uk_sorted_indices]  
   
+china_sorted_indices = sorted(range(len(china_cities)), key=lambda k: china_populations[k])  
+china_sorted_cities = [china_cities[i] for i in china_sorted_indices]  
+china_sorted_pops = [china_populations[i] for i in china_sorted_indices]  
+import matplotlib.pyplot as plt  
 # Create bar plot for UK cities  
 plt.figure(figsize=(10, 5))  
 plt.bar(uk_cities, uk_sorted_pops)  
