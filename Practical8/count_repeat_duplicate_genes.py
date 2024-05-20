@@ -12,18 +12,19 @@ if repetitive_seq == 'GTCTGT':
     output_file = open('GTCTGT_duplicate_genes.fa','w')
 seq = ''
 i = 0
-name = []
-# Import regex to solve the problem where the re cannot find fields that match the expression in overlapping areas
-import regex 
+# iterate each line in the input file
 for line in input_file:
+    line = line.strip()
     if line.startswith(">"):
-        name.append(str(re.findall(r'gene:(.+)\sgene_biotype', line))) # see if it matches the regular expression
-        n = regex.findall(repetitive_seq, seq, overlapped = True) # add overlapped to search overlapping areas
-        count = len(n)
-        if count != 0: # if the repetitive sequence exist
-            name[i-1] = name[i-1] + ' has '+ str(count) +' '+ repetitive_seq + '\n'
-            output_file.write(name[i-1]) # write
-        i += 1
+        # If the sequence contains the repetitive element, write gene info to output file
+        if repetitive_seq in seq:
+            output_file.write(f'>{gene_name} {seq.count(repetitive_seq)}\n{seq}\n\n')  #Add an extra newline between gene name and sequence
+        # Update gene name and reset sequence
+        gene_name = re.findall(r'gene:(.+)\sgene_biotype', line)[0]
         seq = ''
     else:
-        seq += re.sub(r'\n','', line) # store the whole sequence without '\n' in the string
+        seq += line
+
+# Write last gene info to output file
+if repetitive_seq in seq:
+    output_file.write(f'>{gene_name} {seq.count(repetitive_seq)}\n{seq}\n\n')  #Add an extra newline between gene name and sequence
