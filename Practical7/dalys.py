@@ -10,7 +10,7 @@ dalys_data = pd.read_csv("dalys-rate-from-all-causes.csv")
 print(dalys_data.iloc[0:110:10,3])
 dalys_data.info()
 print(dalys_data.describe())
-#A new DataFrame containing the first three rows of the original DataFrame and the specified three columns
+#a new DataFrame containing the first three rows of the original DataFrame and the specified three columns
 print(dalys_data.iloc[0:3,[0,1,3]])
 #use a Boolean to access entries
 my_columns = [True, True, False, True]  
