@@ -83,8 +83,6 @@ plt.ylabel('Number of GO Terms')
 plt.title('The Number of Terms within Each Ontology: SAX')
 plt.tight_layout()
 plt.show()
-plt.clf()
-
 #Time taken to parse XML using DOM: 0:00:12.944466
 #Time taken to parse XML using SAX: 0:00:02.675386
 #SAX is quicker to complete the task
