@@ -30,7 +30,7 @@ print(dalys_data.loc[Afghanistan,"DALYs"])
 # use a Boolean to show DALYs for all rows corresponding to China.
 China = []
 for i in range(0,dalys_data.shape[0]):
-    if dalys_data.iloc[i,0] == 'Afghanistan':
+    if dalys_data.iloc[i,0] == 'China':
         China.append(True)
     else:
         China.append(False)
